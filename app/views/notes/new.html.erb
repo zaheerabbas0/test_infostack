@@ -1,2 +1,9 @@
-<h1>Notes#new</h1>
-<p>Find me in app/views/notes/new.html.erb</p>
+<h1>New Note</h1>
+
+<%= form_with model: @note do |form| %>
+  <p>Title: <%= form.text_field :title %></p>
+  <p>Message: <%= form.text_area :message %></p>
+  <%= form.submit "Create Note" %>
+<% end %>
+
+<%= link_to "Back to Notes", notes_path %>
