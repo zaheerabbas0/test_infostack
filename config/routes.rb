@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get "notes/index"
+  get "notes/new"
+  get "notes/create"
   get "users/new"
   get "users/create"
   get "sessions/new"
